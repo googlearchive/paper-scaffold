@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+<head>
+  <title>paper-scaffold demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../paper-scaffold.html">
+  <link rel="import" href="../../paper-menu/paper-menu.html">
+  <link rel="import" href="../../paper-item/paper-item.html">
+  <link rel="stylesheet" href="../../paper-styles/demo.css">
+
+  <style>
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    paper-scaffold {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .content {
+      height: 2000px;
+      padding: 10px;
+      background: linear-gradient(rgb(214, 227, 231), lightblue);
+    }
+
+    /* some default styles for mode="cover" on paper-scaffold */
+    paper-scaffold[mode=cover]::shadow paper-header-panel::shadow #mainContainer {
+      left: 120px;
+    }
+
+    paper-scaffold[mode=cover] .content {
+      margin: 20px 100px 20px 0;
+    }
+
+    #mainContainer.paper-header-panel {
+      overflow: initial;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <paper-scaffold>
+
+    <paper-header-panel navigation flex mode="seamed">
+      <paper-toolbar style="background-color: #526E9C; color: #fff;">Application</paper-toolbar>
+      <paper-menu>
+        <paper-item>item 1</paper-item>
+        <paper-item>item 2</paper-item>
+      </paper-menu>
+    </paper-header-panel>
+
+    <div tool>Title</div>
+
+    <div class="content">Content goes here...</div>
+
+  </paper-scaffold>
+
+</body>
+</html>
