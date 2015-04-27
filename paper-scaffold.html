@@ -102,7 +102,7 @@ To have the content fit to the main area, use `fit` attribute.
 
   <paper-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerwidth="{{drawerWidth}}" rightdrawer="{{rightDrawer}}" responsivewidth="{{responsiveWidth}}" disableswipe="{{disableSwipe}}">
 
-    <div vertical="" layout="" drawer="">
+    <div class="vertical layout" drawer>
 
       <content select="[navigation], nav"></content>
 
@@ -159,7 +159,10 @@ To have the content fit to the main area, use `fit` attribute.
        * @type string
        * @default '256px'
        */
-      drawerWidth: '256px',
+      drawerWidth: {
+        type: String,
+        value: '256px'
+      },
 
       /**
        * When the browser window size is smaller than the `responsiveWidth`,
@@ -170,7 +173,10 @@ To have the content fit to the main area, use `fit` attribute.
        * @type string
        * @default '600px'
        */
-      responsiveWidth: '600px',
+      responsiveWidth: {
+        type: String,
+        value: '600px'
+      },
 
       /**
        * If true, position the drawer to the right. Also place menu icon to
@@ -180,7 +186,10 @@ To have the content fit to the main area, use `fit` attribute.
        * @type boolean
        * @default false
        */
-      rightDrawer: false,
+      rightDrawer: {
+        type: Boolean,
+        value: false
+      },
 
       /**
        * If true, swipe to open/close the drawer is disabled.
@@ -189,7 +198,10 @@ To have the content fit to the main area, use `fit` attribute.
        * @type boolean
        * @default false
        */
-      disableSwipe: false,
+      disableSwipe: {
+        type: Boolean,
+        value: false
+      },
 
       /**
        * Used to control the header and scrolling behaviour of `paper-header-panel`
@@ -198,7 +210,11 @@ To have the content fit to the main area, use `fit` attribute.
        * @type string
        * @default 'seamed'
        */
-      mode: {value: 'seamed', reflect: true}
+      mode: {
+        type: String,
+        value: 'seamed',
+        reflect: true
+      }
     },
 
     ready: function() {
